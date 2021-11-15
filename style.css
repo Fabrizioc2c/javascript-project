@@ -1,87 +1,327 @@
-body{  
-     background-image :url("Pic/frank-mckenna-OD9EOzfSOh0-unsplash.jpg")
-    ;  
-}  
-  
-.container{  
-    width: 300px;      
-    background-color: rgba(255, 255, 255, 0.301);  
-      
-    display: block;  
-    margin: 0 auto;  
-      
-    border-radius: 20px;  
-    padding-bottom : 50px;
-    padding-top: 30px;  
-}  
-  
+body {
+  background-image: url("Pic/frank-mckenna-OD9EOzfSOh0-unsplash.jpg");
+}
+
+.d-none{
+  display:none;
+}
+.d-block{
+  display: block;
+}
+
+/* Top container
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.top-container{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+
+.notification {
+  background-color: #f8d7da;
+  display: none;
+}
+
+.notification p {
+  color: #721c24;
+  font-size: 1.2em;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.weather-container {
  
+  width: 300px;
+  height: 280px;
+}
+
+.weather-icon {
+  width: 30pxauto;
+  height: auto;
+}
+
+
+.temperature-value {
+  width: 300px;
+  height: 60px;
+}
+
+.temperature-value p {
+  padding: 0;
+  margin: 0;
+  color: #1d1e22;
+  font-size: 4em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.temperature-value span {
+  color: #293251;
+  font-size: 0.5em;
+}
+
+.temperature-description p {
+  padding: 8px;
+  margin: 5;
+  color: #293251;
   
-.notification{  
-    background-color: #f8d7da;  
-    display: none;  
-}  
+  font-size: 1.2em;
+}
+
+.location p {
+  margin: 0;
+  padding: 0;
+  color: #293251;
   
-.notification p{  
-    color: #721c24;  
-    font-size: 1.2em;  
-    margin: 0;  
-    text-align: center;  
-    padding: 10px 0;  
-}  
-  
-.weather-container{  
-    width: 300px;  
-    height: 260px;  
-     
-}  
-  
-.weather-icon{  
-    width: 300px;  
-    height: 128px;  
-}  
-  
-.weather-icon img{  
-    display: block;  
-    margin: 0 auto;  
-}  
-  
-.temperature-value{  
-    width: 300px;  
-    height:60px;  
-}  
-  
-.temperature-value p{  
-    padding: 0;  
-    margin: 0;  
-    color: #1d1e22;  
-    font-size: 4em;  
-    text-align: center;  
-    cursor: pointer;  
-}  
+  font-size: 0.8em;
+}
+
+
+
+:root {
+  --bg_main: #0a1f44;
+  --text_light:black;
+  --text_med: #53627c;
+  --text_dark: #1e2432;
+  --red: #ff1e42;
+  --darkred: #c3112d;
+  --orange: #ff0000;
+}
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+button, input {
+  border: none;
+  background: none;
+  outline: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* SECTION #1
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.top-banner {
+  color: var(--text_light);
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 0.02em;
+  padding: 0 0 30px 0;
+}
+
+.top-banner form {
+  margin-bottom: 3%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.top-banner form input {
+  font-size: 2rem;
+  height: 40px;
+  padding: 5px 5px 10px;
+  border-bottom: 1px solid;
+}
+
+.top-banner form input::placeholder {
+  color: currentColor;
+}
+
+.top-banner form button {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding: 15px 20px;
+  margin-left: 15px;
+  border-radius: 5px;
+  background: greenyellow;
+  transition: background 0.3s ease-in-out;
+}
+
+.top-banner form button:hover {
+  background: var(--darkred);
+}
+
+.top-banner form .msg {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  max-width: 450px;
+  min-height: 40px;
+}
+
+/* SECTION #2
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+
+.ajax-section .cities {
+  display: grid;
+  grid-gap: 20px 40px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.ajax-section .city,.local-weather-btn {
+ 
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.37);
+  color: var(--text_med);
+}
+
+
+
+.ajax-section figcaption {
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ajax-section .city-temp {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--text_dark);
+}
+
+.ajax-section .city sup {
+  font-size: 0.5em;
+}
+
+.ajax-section .city-name sup,.local-weather-btn sup {
+  padding: 0.2em 0.6em;
+  border-radius: 30px;
+  color: var(--text_light);
+  background:whitesmoke
+}
+
+.ajax-section .city-icon {
+  margin-top: 10px;
+  width: 220px;
+  height: 100px;
+}
+
+/* API Key banner
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.api {
+  background: #fffbbc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.api a {
+  text-decoration: underline;
+}
+
+.api a:hover {
+  text-decoration: none;
+}
+
+.cards {
+  margin-right: 2%;
+  border-radius: 20px  ;
+  background-color: rgba(255, 255, 255, 0.37);
+}
+
   
 
-.temperature-value span{  
-    color: #293251;  
-    font-size: 0.5em;  
-}  
+/* Modal
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* The Close Button */
+.close {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/* Modal Header */
+.modal-header {
+  border-radius: 20px;
+  padding: 8px 16px;
+  background-color: #5cb85ca1;
+  color: white;
+  display:flex;
+
+}
+
+/* Modal Body */
+.modal-body {
+  
+  padding: px 16px;}
+
+
+/* Modal Content */
+.modal-content {
+  border-radius: 20px ;
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+
+  width: 15%;
   
 
-  
-.temperature-description p{  
-    padding: 8px;  
-    margin: 0;  
-    color: #293251;  
-    text-align: center;  
-    font-size: 1.2em;  
-}  
-  
+}
 
-  
-.location p{  
-    margin: 0;  
-    padding: 0;  
-    color: #293251;  
-    text-align: center;  
-    font-size: 0.8em;  
-} 
