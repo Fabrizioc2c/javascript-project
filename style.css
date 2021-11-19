@@ -75,15 +75,7 @@ body {
   font-size: 0.8em;
 }
 
-:root {
-  --bg_main: #0a1f44;
-  --text_light: black;
-  --text_med: #53627c;
-  --text_dark: #1e2432;
-  --red: #ff1e42;
-  --darkred: #c3112d;
-  --orange: #ff0000;
-}
+
 
 a {
   color: inherit;
@@ -126,7 +118,7 @@ ul {
 
 
 .top-banner {
-  color: var(--text_light);
+  color: black;
 }
 
 .heading {
@@ -177,72 +169,54 @@ ul {
   min-height: 40px;
 }
 
-/* SECTION #2
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.ajax-section .cities {
+
+.city-section .cities {
   display: grid;
   grid-gap: 20px 40px;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.ajax-section .city,
+.city-section .city,
 .local-weather-btn {
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.37);
-  color: var(--text_med);
+  color:#53627c;
 }
 
-.ajax-section figcaption {
+.city-section figcaption {
   margin-top: 10px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
-.ajax-section .city-temp {
+.city-section .city-temp {
   font-size: 5rem;
   font-weight: bold;
   margin-top: 10px;
   color: var(--text_dark);
 }
 
-.ajax-section .city sup {
+.city-section .city sup {
   font-size: 0.5em;
 }
 
-.ajax-section .city-name sup,
+.city-section .city-name sup,
 .local-weather-btn sup {
   padding: 0.2em 0.6em;
   border-radius: 30px;
-  color: var(--text_light);
+  color: black;
   background: whitesmoke;
 }
 
-.ajax-section .city-icon {
+.city-section .city-icon {
   margin-top: 10px;
   width: 220px;
   height: 100px;
 }
 
-/* API Key banner
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.api {
-  background: #fffbbc;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px;
-}
 
-.api a {
-  text-decoration: underline;
-}
-
-.api a:hover {
-  text-decoration: none;
-}
 
 .cards {
   margin-right: 2%;
