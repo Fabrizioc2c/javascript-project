@@ -65,7 +65,7 @@ function showError(error) {
 }
 
 function getWeather(latitude, longitude, inputValue) {
-    var api = `http://api.openweathermap.org/data/2.5/weather?&lat=${latitude}&lon=${longitude}&appid=${"5592128f62ae0bf71e7b939a95d8465c"}&units=metric`;
+    var api = `https://api.openweathermap.org/data/2.5/weather?&lat=${latitude}&lon=${longitude}&appid=${"5592128f62ae0bf71e7b939a95d8465c"}&units=metric`;
 
     // if (inputValue != null){
     //     var api = `http://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${'5592128f62ae0bf71e7b939a95d8465c'}&units=metric`;
